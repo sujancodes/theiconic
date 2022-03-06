@@ -1,0 +1,154 @@
+@media (max-width: 1030px) {        /* ipad pro screens */
+    /* Home CSS */
+    .home .home-banner-1,
+    .home .home-banner-2
+    {
+        background-position: 65% center;
+        min-height: 550px;
+    }
+    .home .home-banner .home-banner-text
+    {
+        transform: translate(-80%, -50%);
+    }
+
+    /* Offer CSS*/
+    .offers .offer-box .offer-info .heading-bigger
+    {
+        font-size: 3rem;
+    }
+    .offers .offer-box .offer-info .offer-title-1
+        { font-size: 0.8rem; }
+
+    /* Special CSS */
+    .special .countdown-container li
+    {
+        padding: 1.5rem 1rem;
+    }
+}
+
+@media (max-width: 991px) {         /* ipad screens */
+    /* Home CSS */
+    .home .home-banner-1,
+    .home .home-banner-2
+    {
+        background-position: 65% center !important;
+        min-height: 450px;
+    }
+    .home .home-banner .home-banner-text
+    {
+        transform: translate(-88%, -34%) !important;
+    }
+
+    /* products section */
+    .products .up-to-content h2
+    {
+        font-size: 1.6rem;
+    }
+
+    /* Special CSS */
+    .special .countdown-container
+    {
+        padding-top: 1rem;
+        padding-bottom: 5rem;
+    }
+
+}
+@media (max-width: 767px) {     /* iphone / phone sizes*/
+    
+    .navbar-brand img{
+        width: 7rem;
+        height: auto;
+    }
+
+    /* Home CSS */
+    .home .home-banner-2
+    {
+        background-position: 62% center !important;
+        min-height: 150px;
+    }
+    .home .home-banner-1
+    {
+        background-position: 50% center !important;
+        min-height: 150px;
+    }
+    .home .home-banner .home-banner-text
+    {
+        text-align: center;
+        width: 100%;
+        transform: translate(-50%, -10%) !important;
+    }
+    .home .home-banner .home-banner-text h1
+    {
+        font-size: 3rem;
+    }
+    .home .home-banner .home-banner-text h2
+    {
+        font-size: 1.2rem;
+    }
+    .home .home-banner .home-banner-text .btn-danger
+    {
+        padding-inline-end: 0.5rem 1.5rem;
+    }
+    .home .slider-icon
+    {
+        font-size: 2rem;
+    }
+
+    /* products section */
+    .products .up-to-content h2
+    {
+        font-size: 1rem;
+    }
+
+    /* Special CSS */
+
+    .special
+    {
+        padding: 4rem 0;
+    }
+    .special .countdown-container li
+    {
+        padding: 1rem;
+        width: 20%;
+    }
+
+}
+
+@media (max-width: 420px) {
+
+    .navbar-brand img{
+        width: 100%;
+        height: 2rem;
+    }
+    .home .home-banner .home-banner-text h1
+    {
+        font-size: 4rem !important;
+    }
+    .home .home-banner .home-banner-text h2
+    {
+        font-size: 1.5rem;
+    }
+    .home .home-banner-1,
+    .home .home-banner-2
+    {
+        background-position: 25% center !important;
+        min-height: 450px !important;
+    }
+    .home .home-banner .home-banner-text
+    {
+        transform: translate(-50%, -50%) !important;
+    }
+
+    /* products section */
+    .products .up-to-content h2
+    {
+        font-size: 0.9rem;
+    }
+    /* footer CSS */
+    footer p
+    {
+    font-size: 0.8rem;
+    }
+
+}
+

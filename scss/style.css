@@ -1,0 +1,549 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  -webkit-box-shadow: 0 1px 12px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 1px 12px rgba(0, 0, 0, 0.4);
+  z-index: 999;
+  -webkit-animation: ss 0.9s linear;
+  animation: ss 0.9s linear;
+}
+
+.nav-link.active, .navbar-light .navbar-nav .show > .nav-link {
+  background: #e1e1e1;
+  border-radius: 10px;
+}
+
+.btn-default:active .filter-button:active {
+  background-color: var(--bg-danger);
+  color: white;
+}
+
+:root {
+  --bg-danger: #f63440;
+  --bg-white: #fff;
+  --bg-light-white: #f5f5f5;
+  --primary-font: 'Montserrat', sans-serif;
+  --text-white: #fff;
+  --text-black: #121212;
+  --text-danger: #f63440;
+  --text-gray: #aaa;
+  --text-dark-gray: #777;
+}
+
+body {
+  font-family: var(--primary-font);
+  font-size: 1rem;
+  /*1rem = 16px*/
+  font-weight: 400;
+  line-height: 1.75rem;
+  background: var(--bg-white);
+  color: var(--text-black);
+  overflow-x: hidden;
+  /*to avoid horizontal scrolling bar*/
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+p {
+  margin: 0;
+}
+
+.btn-danger {
+  background: var(--bg-danger);
+  border-color: var(--bg-danger);
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.btn-danger:hover {
+  color: var(--text-danger);
+  background: transparent;
+}
+
+/* Navigation section */
+#header .navbar-nav .nav-item .nav-link {
+  color: var(--text-black);
+  padding: 0.5rem 1rem;
+  text-align: center;
+}
+
+#header .navbar-nav .nav-item .nav-link:hover, #header .navbar-nav .nav-item .nav-link .nav-link.active {
+  color: var(--text-danger);
+}
+
+#header .navbar-toggler:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.navbar-light .navbar-toggler-icon {
+  width: unset;
+  height: unset;
+}
+
+.navbar-brand img {
+  width: 100%;
+  height: 4rem;
+}
+
+/* End of Navigation section */
+/* Home CSS */
+#home .home-banner-1,
+#home .home-banner-2 {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 90% center;
+  min-height: 650px;
+  position: relative;
+}
+
+#home .home-banner-1 {
+  background-image: url("../images/slide1.jpg");
+}
+
+#home .home-banner-2 {
+  background-image: url("../images/slide2.jpg");
+}
+
+#home .home-banner .home-banner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-110%, -50%);
+          transform: translate(-110%, -50%);
+}
+
+#home .home-banner .home-banner-text h1 {
+  font-size: 6rem;
+}
+
+#home .carousel-indicators [data-bs-target] {
+  background-color: var(--bg-danger);
+  width: 2.5rem;
+  height: 0.3rem;
+}
+
+.indicator-size {
+  font-size: 3rem;
+}
+
+/* Offer CSS */
+.offers {
+  padding-top: 8.5rem;
+}
+
+.offers .offer-box .offer-image::before {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: -100%;
+  z-index: 2;
+  display: block;
+  width: 50%;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0.3)));
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%);
+  -webkit-transform: skewX(-25deg);
+          transform: skewX(-25deg);
+}
+
+.offers .offer-box .offer-image img {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.offers .offer-overlay::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.offers .offer-box .offer-info {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  z-index: 1;
+  -webkit-transition: all 250ms ease-out;
+  transition: all 250ms ease-out;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.offers .offer-box .offer-info .heading-bigger {
+  font-size: 4rem;
+  line-height: 1;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-bottom: 0;
+  color: var(--text-white);
+}
+
+.offers .offer-box .offer-info .offer-title-1 {
+  color: var(--text-white);
+  font-size: 1.2rem;
+  font-weight: 300;
+  margin-bottom: 0;
+  letter-spacing: 2px;
+}
+
+.offers .offer-box .offer-info .btn-outline-danger {
+  color: var(--text-white);
+  border-color: var(--bg-white);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.offers .offer-box .offer-info .btn-outline-danger:hover {
+  border-color: var(--bg-danger);
+  background-color: var(--bg-danger);
+}
+
+.offers .offer-box:hover .offer-image::before {
+  -webkit-animation: effect_shine 1s;
+          animation: effect_shine 1s;
+}
+
+@-webkit-keyframes effect_shine {
+  100% {
+    left: 150%;
+  }
+}
+
+@keyframes effect_shine {
+  100% {
+    left: 150%;
+  }
+}
+
+/* Products CSS */
+.products {
+  padding-top: 8.5rem;
+}
+
+.products a {
+  text-decoration: none;
+  color: var(--text-black);
+}
+
+.products .product-list .product-image img {
+  -webkit-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+}
+
+.products .product-list .product-image .product-image-secondary {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.products .product-list .product-image:hover .product-image-secondary {
+  opacity: 1;
+}
+
+.products .product-list .product-image .sale {
+  background: var(--bg-danger);
+  border-radius: 3.3rem;
+  color: var(--text-white);
+  font-size: 0.8rem;
+  letter-spacing: 0.15rem;
+  line-height: 1.5rem;
+  padding: 0.25rem 0.8rem;
+  text-transform: uppercase;
+  position: absolute;
+  left: 1rem;
+  top: 1.8rem;
+  z-index: 99;
+}
+
+.products h3 {
+  font-size: 1.1rem;
+  color: var(--text-black);
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.products h3:hover {
+  color: var(--text-danger);
+}
+
+.products .amount {
+  color: var(--text-danger);
+  font-weight: 500;
+}
+
+.products .amount del {
+  color: var(--text-gray);
+}
+
+.products .fa-star-o {
+  color: var(--text-gray);
+}
+
+.products .active {
+  color: var(--text-danger);
+}
+
+.products .add-to-cart {
+  background: transparent;
+  padding: 0.4rem 0.8rem;
+  font-size: 1rem;
+  font-weight: 500;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.products .add-to-cart:hover {
+  color: var(--text-danger);
+  border-color: var(--text-danger);
+}
+
+.products .up-to-off {
+  position: relative;
+}
+
+.products .up-to-off::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 2;
+  cursor: pointer;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.products .up-to-off img {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.products .up-to-off:hover img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.products .up-to-content {
+  color: var(--text-white);
+  font-size: 1.6rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 3;
+}
+
+.headline h2::before {
+  content: '';
+  width: 30%;
+  height: 0.15rem;
+  background-color: var(--bg-danger);
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-radius: 0.6rem;
+}
+
+/* Special Sale CSS*/
+.special {
+  padding: 3rem 0;
+  background: var(--bg-light-white);
+}
+
+.special .countdown-container {
+  padding-top: 4.3rem;
+}
+
+.special .countdown-container p {
+  color: var(--text-dark-gray);
+  font-weight: 300;
+  line-height: 1.8rem;
+}
+
+.special .countdown-container .countdown-counter {
+  display: block;
+  width: 100%;
+  margin: 2rem 0 4.8rem 0;
+  padding: 0;
+}
+
+.special .countdown-container li {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-align: center;
+  background: var(--bg-white);
+  border-radius: 0.3rem;
+  padding: 2rem 3rem;
+  width: 20%;
+  margin: 0 0.3rem;
+}
+
+.special .countdown-container li del {
+  color: var(--text-gray);
+  font-size: 1rem;
+}
+
+.special .special-img span {
+  background: var(--bg-danger);
+  border-radius: 0.3rem;
+  color: var(--text-white);
+  font-size: 0.8rem;
+  letter-spacing: 0.2rem;
+  line-height: 1.4rem;
+  padding: 0.2rem;
+  text-transform: uppercase;
+  position: absolute;
+  left: 1rem;
+  top: 1.15rem;
+  z-index: 99;
+}
+
+/* Testimonial CSS */
+.testimonial {
+  padding: 5rem 0 8rem;
+}
+
+.testimonial .testimonial-wrapper {
+  background: var(--bg-white);
+  margin: auto;
+  padding: 1rem 5rem;
+}
+
+.testimonial .testimonial-wrapper img {
+  border-radius: 100%;
+  width: 7rem;
+  height: 7rem;
+  margin: 1.25rem auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-color: var(--bg-white);
+  border: 0.063rem solid var(--bg-white);
+}
+
+.testimonial .testimonial-wrapper span {
+  color: var(--text-gray);
+  font-size: 1rem;
+  text-transform: uppercase;
+  margin: 1rem 0;
+  display: block;
+}
+
+.testimonial .testimonial-wrapper p {
+  font-size: 0.8rem;
+  font-weight: 300;
+}
+
+.testimonial .carousel-indicators {
+  position: absolute;
+  bottom: -3rem;
+}
+
+.testimonial .carousel-indicators [data-bs-target] {
+  background-color: var(--bg-danger);
+}
+
+/* End of Testimonial CSS */
+.contact {
+  padding: 4rem 0;
+  background-color: var(--bg-light-white);
+}
+
+.contact .info li p a {
+  font-size: 1rem;
+  display: inline-block;
+  margin: 0.75rem 0;
+  color: var(--text-black);
+}
+
+.contact .form-group {
+  margin-bottom: 1.5rem;
+}
+
+.contact .form-control {
+  height: 3.75rem;
+  padding: 0.3rem 1.2rem;
+  border: none;
+  font-size: 1rem;
+}
+
+.contact .textarea {
+  width: 100%;
+  border-radius: 0.25rem;
+  border: none;
+  font-size: 1rem;
+  padding: 0.75rem 1.2rem;
+  margin-top: 0.3rem;
+}
+
+#scrollup {
+  position: fixed;
+  right: 2%;
+  bottom: 3%;
+  height: 2.8rem;
+  width: 2.5rem;
+  cursor: pointer;
+  z-index: 9999;
+  text-align: center;
+  border-radius: 0.25rem;
+  -webkit-transition: all 0.4s ease-in-out 0s;
+  transition: all 0.4s ease-in-out 0s;
+  background: var(--bg-danger);
+}
+
+#scrollup span {
+  line-height: 2.5rem;
+}
+/*# sourceMappingURL=style.css.map */
