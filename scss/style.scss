@@ -111,7 +111,7 @@ p
     img
     {
         width: 100%;
-        height: auto;
+        height: 4rem;
     }
 }
 /* End of Navigation section */
@@ -144,7 +144,10 @@ p
             top: 50%;
             left: 50%;
             transform: translate(-110%, -50%);
-            h1{ font-size: 6rem;}
+            h1{ 
+                font-size: 6rem;
+                color: var(--text-white);
+            }
         }
     }
     .carousel-indicators [data-bs-target]

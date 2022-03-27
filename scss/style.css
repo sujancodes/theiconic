@@ -133,6 +133,7 @@ p {
 
 #home .home-banner .home-banner-text h1 {
   font-size: 6rem;
+  color: var(--text-white);
 }
 
 #home .carousel-indicators [data-bs-target] {
